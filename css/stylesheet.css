@@ -3,6 +3,21 @@
 	padding: 0;
 }
 
+.instagram p {
+    display: block;
+    margin-right: 10px;
+}
+
+.instagram {
+    display: flex;
+}
+
+.facebook {
+    display: flex;
+}
+
+.facebook p {display: block;margin-right: 10px;}
+
 .content .description a {
     display: block;
     margin-bottom: 15px;
@@ -23,7 +38,7 @@
     background: #e6e4ea;
     margin-top: 30px;
     padding: 10px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .footer {
