@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<title>Bài 2. Tạo USB cài Hackintosh (P1)</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand logo" href="../index.html">
+	  	<img src="../images/avatar.jpg" alt="Logo Blog" class="img-fluid">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="../index.html">Hackintosh Tutorial <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="../about.html">Giới thiệu</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="../contact.html">Liên hệ</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="panner">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="title">
+						<p>SERIES OF HACKINTOSH</p>
+					</div>
+					<div class="content">
+						<p>Đầy đủ từ những điều cơ bản nhất</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="container">
+			<div class="item">
+				<div class="row">
+					<div class="col-12">
+						<h2 id="bài1.giớithiệuvềhackintosh">Bài 2. Tạo USB cài Hackintosh (P1)</h2>
+						<hr>
+						<p>Chào các bạn, Như đề cập trong phần tiêu đề thì trong bài viết này mình sẽ giới thiệu cho các bạn về các cách có thể tạo 1 chiếc USB cài đặt Hackintosh: Cụ thể về Hackintosh là gì các bạn có thể xem qua trong bài viết trước đó của mình <a href="bai1.html">Giới thiệu về Hackintosh</a> 😂.</p>
+
+						<p>Về tổng quan, chúng ta sẽ có 3 cách để có thể tạo được USB này:</p>
+
+						<ul>
+							<li>Cách 1: Bung file DMG đã làm tất cả mọi thứ từ A đến Z vào USB</li>
+							<li>Cách 2: Sử dụng công cụ Unibeast của các kỹ sư trên trang <a href="https://www.tonymacx86.com/">tonymacx86.com</a></li>
+							<li>Cách 3: Làm thủ công từ A đến Z (<strong>Cách được khuyến khích sử dụng nhất</strong>)</li>
+						</ul>
+
+						<p><strong>Lưu ý:</strong> USB của các bạn nên từ 8GB+ nhé.</p>
+
+						<p>Còn chờ gì nữa, Let&#8217;s go !!! 💪💪</p>
+
+						<hr />
+
+						<h2 id="cách1:bungfiledmglàmsẵn">Cách 1: Bung file DMG làm sẵn</h2>
+
+						<p>Nếu trước đây các bạn từng đi cài win dạo thì chắc hẳn có biết đến kỹ thuật <strong>&#8220;GHOST&#8221;</strong> máy tính. Mọi dữ liệu về hệ điều hành hay dữ liệu nói chung sẽ được nén thành 1 file GHOST có đuôi .GHO như là 1 file backup . Và khi bạn bung file .GHO ra hay nôm na là giải nén ra ổ cứng của các bạn thì khi đó dữ liệu đã được backup trong file .GHO sẽ được ghi mới lên ổ cứng. Và trên MacOS, file .GHO đó tương tự chính là file <strong>&#8220;.DMG&#8221;</strong>. Trên thị trường hiện nay có rất nhiều các kỹ sư, lập trình viên trên toàn thế giới đã làm sẵn cho chúng ta những bản backup này.
+						Nhưng nổi tiếng và uy tín nhất mà mình từng biết thì đó là <strong>HackintoshZone</strong> của <strong>Niresh</strong> - một anh chàng rất có tiếng trong giới Hackintosh.</p>
+
+						<p>Cụ thể địa chỉ các sản phẩm của Niresh có tại: <a href="https://www.hackintoshzone.com/profile/1-niresh/content/?type=downloads_file&amp;change_section=1">HackintoshZone</a></p>
+
+						<figure>
+						<img src="https://images.viblo.asia/a327e72b-e457-4c75-b88d-10b8c9e57d06.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<h3 id="1.tảifile.dmg">1. Tải file .DMG</h3>
+
+						<p>Trên trang này chúng ta có thể bắt gặp rất nhiều phiên bản MacOS đã được làm sẵn, chẳng hạn như trên hình mình sẽ chọn phiên bản Hackintosh Mojave - phiên bản cài đặt của MacOS Mojave 10.14. Các bạn sẽ tải về bản .zip như hình dưới</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/2f0b6130-e0b6-4c83-8dc5-d3bc3b594da1.png" alt=""  class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Giải nén file .zip sẽ có 1 file tên &#8220;Niresh Mojave.torrent&#8221;, Mở file này lên để tải về file &#8220;Niresh-Mojave.DMG&#8221;</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/b674bbe3-a42e-476c-a159-6d98f7501b9c.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<figure>
+						<img src="https://images.viblo.asia/5d716e84-f2a4-45e0-af12-13bd9d118aac.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<h3 id="2.tảicôngcụtạobộcàivàrestoreusb">2. Tải công cụ tạo bộ cài và restore USB</h3>
+
+						<p>Phổ thông nhất chúng ta có thể sử dụng đó là công cụ <strong>Transmac</strong> cho windows. Hoặc bất cứ phần mềm nào cho phép ghi file .DMG lên USB.
+						Các bạn có thể tải Transmac về theo địa chỉ sau: <a href="https://www.acutesystems.com/scrtm.htm">Transmac</a></p>
+
+						<p>Sau khi đã có transmac trên máy, các bạn mở lên, tiến hành format lại USB theo chuẩn định dạng HFS+ của Apple bằng cách chuột phải vào USB chọn &#8220;Format Disk For Mac&#8221;.</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/9615d65c-5a61-4a55-9393-7467b6b27a80.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<figure>
+						<img src="https://images.viblo.asia/8022b5cd-2354-4dd6-904e-674f03b5b180.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Một khi đã format thành công, tiếp theo chúng ta sẽ tiến hành ghi file .DMG lên USB bằng cách chuột phải vào USB chọn &#8220;Restore with Disk Image&#8221;</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/90017394-b2fd-4531-8dfb-e6315cfa7d54.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Cửa sổ hiện lên, các bạn chọn file .DMG vừa download được ở trên vào. Quá trình restore sẽ diễn ra, thời gian khoảng từ 20&#8211;25p tuỳ máy</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/b36a4c0a-28e5-4633-bd91-017d6ffae012.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Xong, vậy là theo cách 1 các bạn đã có thể tạo được 1 chiếc USB cài đặt Hackintosh siêu dễ ngay trên Windows, bây giờ bạn đã có thể cài đặt được ngay. Đặt BIOS phải boot chế độ UEFI nhé !!</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/707dc6d8-80ca-44bd-ae1d-d9eaa62755d7.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<h2 id="cách2:sửdụngcôngcụunibeast">Cách 2: Sử dụng công cụ Unibeast</h2>
+
+						<p>Không giống với cách 1, từ cách 2 trở đi bạn bắt buộc phải có 1 máy đã chạy Hackintosh / 1 máy mac thật / hoặc ít nhất có 1 máy windows cài máy ảo MacOS. Tại sao ?? Bởi vì Unibeast là công cụ chỉ chaỵ trên hệ điều hành MacOS.</p>
+
+						<p>Để có thể cài máy áo chạy MacOS trên windows các bạn có thể dễ dàng tìm kiếm được kết quả trên Google. Chẳng hạn như bài hướng dẫn này: <a href="https://www.youtube.com/watch?v=76Vk6OSgoF4">Hackintosh Virtualbox</a></p>
+
+						<p>OK, Vậy là bây giờ trường hợp là tối thiểu bạn đã có 1 máy chạy MacOS rồi nhé. Chúng ta tiếp tục.</p>
+
+						<h3 id="1.tảibộcàitừapple">1. Tải bộ cài từ Apple</h3>
+
+						<p>Trước khi tải công cụ thì trước hết chúng ta cần có bộ cài chính thức từ Apple đã. Cái này các bạn có thể tải về trực tiếp từ App Store, file cài đặt sẽ có định dạng &#8220;Install macOS + tên_phiên_bản_macOS.app&#8221;, tuy nhiên đó sẽ là phiên bản mới nhất. Tải theo : <a href="https://maclife.vn/mac-application/bo-cai-dat-mac">Bộ cài đặt MacOS</a> thì các bạn có thể tải bất cứ phiên bản MacOS nào mong muốn, cho dù đã cũ.</p>
+
+						<p>Ở đây mình chọn phiên bản Mac 10.14</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/150939e9-0d74-479a-8da4-0b68154a09da.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Sau khi tải về, các bạn sẽ có 1 file .DMG như hình dưới</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/9600c26a-7303-466e-8924-bd04da89d1a5.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Mở lên, các bạn sẽ có file cài đặt từ Apple, kéo file đó vào thư mục application bên cạnh</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/cc574d01-d809-4f11-bf72-8bbc84cd29d0.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Vậy là xong bước 1</p>
+
+						<h3 id="2.formatusb">2. Format USB</h3>
+
+						<p>Chỉ riêng format USB trên MacOS cũng có 2 cách:</p>
+
+						<ul>
+						<li>Sử dụng Disk Utility</li>
+						<li>Sử dụng Terminal</li>
+						</ul>
+
+						<p>Tuy nhiên khuyến cáo là nên dùng cách Terminal, và trong bài này mình cũng sẽ sử dụng cách này. Format USB cần chia ra 2 phân vùng riêng biệt:</p>
+
+						<ul>
+						<li>Tuỳ chọn 1: Định dạng MBR với 1 phân vùng FAT32 để boot và một phân vùng HFS+J cho bộ cài MacOS.</li>
+						<li>Tuỳ chọn 2: Định dạng GPT với 1 phân vùng HFS+J cho bộ cài MacOS (phân vùng để boot được tạo tự động gọi là phân vùng EFI).</li>
+						</ul>
+
+						<p>Ở đây, cũng khuyến cáo là nên sử dụng tuỳ chọn 1 :+1: Lí do: Định dạng MBR có thể sử dụng cho ổ cứng MBR và GPT. Còn nếu dùng tuỳ chọn 2 định dạng GPT thì chỉ có thể sử dụng cho ổ cứng định dạng GPT mà không thể đối với MBR.</p>
+
+						<p>Cắm USB của các bạn vào máy, bật Terminal lên, gõ lệnh:</p>
+
+						<code>diskutil list</code>
+
+						<p>Như máy của mình, nó sẽ hiện như sau:</p>
+
+						<code>
+						/dev/disk0 (internal, physical): <br>
+						   #:                       TYPE NAME                    SIZE       IDENTIFIER <br> 
+						   0:      GUID_partition_scheme                        *120.0 GB   disk0 <br> 
+						   1:                        EFI EFI                     209.7 MB   disk0s1 <br> 
+						   2:                  Apple_HFS Sierra                  119.2 GB   disk0s2 <br> 
+						   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3 <br> 
+
+						/dev/disk1 (internal, physical): <br> 
+						   #:                       TYPE NAME                    SIZE       IDENTIFIER <br> 
+						   0:      GUID_partition_scheme                        *500.1 GB   disk1 <br> 
+						   1:                        EFI EFI                     209.7 MB   disk1s1 <br> 
+						   2:                  Apple_HFS DATA                    499.8 GB   disk1s2 <br> 
+
+						/dev/disk2 (disk image): <br> 
+						   #:                       TYPE NAME                    SIZE       IDENTIFIER <br> 
+						   0:     Apple_partition_scheme                        +7.2 GB     disk2 <br> 
+						   1:        Apple_partition_map                         32.3 KB    disk2s1 <br> 
+						   2:                  Apple_HFS UltraEdit EL v18.00 ... 7.2 GB     disk2s2 <br> 
+
+						/dev/disk3 (external, physical): <br> 
+						   #:                       TYPE NAME                    SIZE       IDENTIFIER <br> 
+						   0:     FDisk_partition_scheme                        *15.5 GB    disk3 <br> 
+						   1:                 DOS_FAT_32 CLOVER EFI              209.7 MB   disk3s1 <br> 
+						   2:                  Apple_HFS install_osx             15.3 GB    disk3s2 <br>
+						</code>
+
+						<p>Như các bạn có thể thấy, USB của mình là /dev/disk3 (external, physical)</p>
+
+						<p><strong><em>Đối với các bạn chọn tuỳ chọn 1, gõ lệnh như nhau</em></strong>:</p>
+
+						<code>diskutil partitionDisk /dev/disk3 2 MBR FAT32 &quot;CLOVER EFI&quot; 200Mi HFS+J &quot;install_osx&quot; R</code>
+
+						<p>Giải thích:</p>
+
+						<ul>
+						<li>/dev/disk3 2 MBR: Chia USB làm 2 phân vùng theo kiểu MBR</li>
+						<li>FAT32 &#8220;CLOVER EFI&#8221; 200Mi: Phân vùng thứ nhất định dạng FAT32 có tên là &#8220;CLOVER EFI&#8221; với dung lượng 200MB</li>
+						<li>HFS+J &#8220;install_osx&#8221; R: Phân vùng thứ 2 định dạng HFS+J có tên là &#8220;install_osx&#8221; với dụng lượng còn lại trong USB</li>
+						</ul>
+
+						<p>Sau khi chạy xong, Terminal sẽ hiện ra kết quả:</p>
+
+						<code>
+						/dev/disk3 (external, physical): <br> 
+						   #:                       TYPE NAME                    SIZE       IDENTIFIER <br> 
+						   0:     FDisk_partition_scheme                        *15.5 GB    disk3 <br> 
+						   1:                 DOS_FAT_32 CLOVER EFI              209.7 MB   disk3s1 <br> 
+						   2:                  Apple_HFS install_osx             15.3 GB    disk3s2 <br>
+						</code>
+
+						<p><strong><em>Đối với các bạn chọn tuỳ chọn 2, gõ lệnh như nhau</em></strong>:</p>
+
+						<code>diskutil partitionDisk /dev/disk3 1 GPT HFS+J &quot;install_osx&quot; R
+						</code>
+
+						<p>Giải thích:</p>
+
+						<ul>
+						<li>/dev/disk3 1 GPT: Chia USB làm 1 phân vùng theo kiểu GPT (phân vùng EFI tự động được tạo với dung lượng 200MB)</li>
+						<li>HFS+J &#8220;install_osx&#8221; R: Phân vùng định dạng HFS+J có tên &#8220;install_osx&#8221; với dung lượng còn lại trong USB</li>
+						</ul>
+
+						<p>Sau khi chạy xong, Terminal sẽ hiện ra kết quả:</p>
+
+						<code>
+						/dev/disk3 (external, physical): <br>
+						   #:                       TYPE NAME                    SIZE       IDENTIFIER <br>
+						   0:      GUID_partition_scheme                        *15.5 GB    disk3 <br> 
+						   1:                        EFI EFI                     209.7 MB   disk3s1 <br>
+						   2:                  Apple_HFS install_osx             15.3 GB    disk3s2 <br>
+						</code>
+
+						<p>Vậy là xong bước 2 !!!</p>
+
+						<h3 id="3.ghidữliệucho2phânvùngsaukhiformat">3. Ghi dữ liệu cho 2 phân vùng sau khi format</h3>
+
+						<p>Truy cập địa chỉ: <a href="https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/">tonymacx86 Tools</a> , tải phiên bàn Unibeast tương ứng với bộ cài các bạn tải về ở bước 1. Trở lại bước 1, mình đã tải phiên bản MacOS 10.14 Mojave, nên bây giờ mình sẽ chọn phiên bản Unibeast 9.2.0</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/2c99796f-0092-42cd-9f92-3df034ed8733.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Sau khi tải thành công, giải nén file .zip các bạn được công cụ Unibeast. Kiểm tra lại bộ cài &#8220;Install macOS &lt;tên phiên bản&gt;.app&#8221; các bạn chắc chắn đã copy vào thư mục Application ở bước 1 chưa.</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/645ea1a6-af8e-4477-92ae-fc25b68f5391.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Mọi thứ OKE thì bật Unibeast lên thôi nào, Cứ continue&#8230;continue cho đến màn hình này:</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/5c3f84a2-cfef-4f3f-a865-ed1f1f27e10b.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>thì bấm chọn install_osx rồi continue tiếp</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/b4fa76c7-edc2-4466-9f40-afd836e72741.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Tại đây, Unibeast sẽ tự động bắt bộ cài được đặt trong Application. Đó là lí do tại sao bắt buộc bộ cài phải đặt trong thư mục Application, continue</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/0840b69d-f174-4a38-85a4-4043b22b187b.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Tại đây các bạn có 2 tuỳ chọn:</p>
+
+						<ul>
+						<li>UEFI boot mode: tuỳ chọn dành cho BIOS hỗ trợ chế độ boot UEFI và đang chạy chế độ này</li>
+						<li>Legacy boot mode: tuỳ chọn dành cho BIOS hỗ trợ chế độ boot UEFI nhưng đang chạy chế độ Legacy hoặc BIOS cũ không hỗ trợ kiểu UEFI boot mode</li>
+						</ul>
+
+						<p>Thì ở đây tuỳ cấu hình máy các, các bạn có thể vào BIOS kiểm tra xem máy mình đang hỗ trợ chế độ boot nào. Sau đó đưa ra cú click chính xác nhé. Tại đây mình chọn chế độ UEFI do máy mình có hỗ trợ và cũng đang chạy chế độ này, continue&#8230;continue, nếu Unibeast bắt nhập password xác nhận thì các bạn bấm password vào thôi. Sau đó là chờ đợi, quá trình này có thể diễn ra 20&#8211;25p tuỳ cấu hình máy.</p>
+
+						<figure>
+						<img src="https://images.viblo.asia/87aa42cc-dade-4c85-87cc-9be04c331035.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<figure>
+						<img src="https://images.viblo.asia/39fee758-6067-4f4b-8f8e-f04273e9b46f.png" alt="" class="img-fluid" />
+						<figcaption></figcaption>
+						</figure>
+
+						<p>Đến đây là các bạn đã tạo thành công một chiếc USB cài Hackintosh theo cách số 2. Nhớ đặt BIOS theo chuẩn các bạn chọn trong lúc dùng Unibeast nhé !!!</p>
+
+						<hr />
+
+						<p><strong>Trên đây mình đã hước dẫn các bạn 2 cách để các bạn có thể tạo đượcc 1 chiếc USB cài Hackintosh, còn một cách nữa hẹn các bạn trong phần 2 nhé 💪💪</strong></p>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-left">
+					<p>Copyright © 2019 Minh Mon. Giữ bản quyền.</p>
+				</div>
+				<div class="col-6 text-right">
+					<div class="copyright">
+						<img src="../images/vietnam.jpg" alt="logo copyright" style="width: 30px;"> Việt Nam
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../js/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="../js/popper.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</body>
+</html>
