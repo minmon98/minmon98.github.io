@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<title>Bài 3. Tạo USB cài Hackintosh (P2)</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand logo" href="../index.html">
+	  	<img src="../images/avatar.jpg" alt="Logo Blog" class="img-fluid">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="../index.html">Hackintosh Tutorial <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="../about.html">Giới thiệu</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="../contact.html">Liên hệ</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="panner">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="title">
+						<p>SERIES OF HACKINTOSH</p>
+					</div>
+					<div class="content">
+						<p>Đầy đủ từ những điều cơ bản nhất</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="container">
+			<div class="item post">
+				<div class="row">
+					<div class="col-12">
+						<h2 id="bài1.giớithiệuvềhackintosh">Bài 3. Tạo USB cài Hackintosh (P2)</h2>
+						<hr>
+						<p>Để tiếp nối cho bài viết phần 1 trước đó của mình: <a href="https://viblo.asia/p/tao-usb-cai-dat-hackintosh-p1-aWj534GwK6m">Tạo USB cài đặt Hackintosh (P1)</a> . Trong bài viết này mình sẽ giới thiệu nốt với các bạn cách tạo USB cài đặt Hackintosh cuối cùng trong 3 cách - Cách thủ công được sử dụng nhiều nhất. Lí do bởi vì chúng ta có thể tự tạo USB cài đặt ngay khi Apple tung ra một bản MacOS mới nào đó mà không phải phụ thuộc vào Niresh hay tonymacx86 hay bất cứ ai tạo cho cả. Let&#8217;s go, chúng ta cùng bắt đầu nhé !!!</p>
+
+            <h2 id="cách3:làmthủcông">Cách 3: Làm thủ công</h2>
+
+            <hr />
+
+            <p>Ở cách 3 này, bước 1 và bước 2 giống hoàn toàn với Cách 2: Sử dụng công cụ Unibeast trong bài viết trước đó, bao gồm:</p>
+
+            <ul>
+            <li>Bước 1: Tải bộ cài đặt từ Apple</li>
+            <li>Bước 2: Format USB</li>
+            </ul>
+
+            <p>Sau khi đã hoàn thành 2 bước trên các bạn đã có file cài đặt MacOS trong thư mục Application và 1 USB với 2 phân vùng: CLOVER_EFI, install_osx rỗng, tiếp tục bước tiếp theo dưới đây nhé.</p>
+
+            <h3 id="bước3:càiđặtcloverbootloader">Bước 3: Cài đặt Clover Bootloader</h3>
+
+            <p>Tiến hành tải Clover về từ địa chỉ: <a href="https://sourceforge.net/projects/cloverefiboot/">https://sourceforge.net/projects/cloverefiboot/</a> .</p>
+
+            <figure>
+            <img src="https://images.viblo.asia/faae637b-ddd2-4602-9907-e814a97f5916.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <p>Mở Clover lên, Chọn &#8220;Change Install Location&#8221; -&gt; Chọn CLOVER_EFI</p>
+
+            <figure>
+            <img src="https://images.viblo.asia/44fd8f98-5646-488e-92d8-684227f92be8.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <p>Sau khi chọn phân vùng cài đặt CLOVER_EFI, chọn &#8220;Customize&#8221;</p>
+
+            <figure>
+            <img src="https://images.viblo.asia/1b965c8f-5b7e-4d72-89a7-677189db8f28.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <p><strong>- Đối với USB cài đặt theo kiểu UEFI, chọn theo hình</strong>
+            <img src="https://images.viblo.asia/fd87084a-d76c-4f94-a81f-bd43fba17d18.png" alt="" class="img-fluid"/>
+            <img src="https://images.viblo.asia/cc92d552-081a-4b47-85fb-a82998fff9f4.png" alt="" class="img-fluid"/></p>
+
+            <ul>
+            <li>Chọn &#8220;UEFI booting only&#8221;, &#8220;Install Clover in the ESP&#8221; sẽ tự động được chọn</li>
+            <li>Chọn &#8220;BGM&#8221; trong phần Themes</li>
+            <li>Phần UEFI Drivers, để như mặc định nhưng bỏ tuỳ chọn VBoxHfs-64 đi, chọn thêm AptioMemoryFix-64</li>
+            </ul>
+
+            <p><strong>- Đối với USB cài đặt theo kiểu Legacy, chọn theo hình</strong>
+            <img src="https://images.viblo.asia/f8fac2bd-bdce-4f7a-a8cc-62ef7e5ac9cc.png" alt="" class="img-fluid"/>
+            <img src="https://images.viblo.asia/54ab2d9a-af7c-4f8e-bab9-45df5a124c77.png" alt="" class="img-fluid"/>
+            <img src="https://images.viblo.asia/e082e5f9-570e-4c65-821a-7470f918aa40.png" alt="" class="img-fluid"/></p>
+
+            <ul>
+            <li>Bỏ chọn &#8220;UEFI booting only&#8221;</li>
+            <li>Bỏ chọn &#8220;Install Clover in the ESP&#8221;</li>
+            <li>Trong phần&#8220;Boot Sectors&#8221;, chọn &#8220;Install boot0af in MBR&#8221; (tuỳ chọn &#8220;Install boot0ss in MBR&#8221; dành cho ổ HDD nếu cài song song với Windows)</li>
+            <li>Chọn &#8220;BGM&#8221; trong phần Themes</li>
+            <li>Phần UEFI Drivers, để như mặc định nhưng bỏ tuỳ chọn VBoxHfs-64 đi, chọn thêm AptioMemoryFix-64</li>
+            </ul>
+
+            <p><strong>Config lại 1 chút</strong></p>
+
+            <ol>
+            <li>Đối với USB theo kiểu UEFI, mặc định Clover sẽ không thể nhận diện được các ổ có định dạng HFS+ (Định dạng phân vùng của Apple), do đó ta cần giúp nó nhận diện được thôi, bằng cách sử dụng HFSPlus:</li>
+            </ol>
+
+            <ul>
+            <li>Tải về theo địa chỉ : https://github.com/JrCs/CloverGrowerPro/raw/master/Files/HFSPlus/X64/HFSPlus.efi.</li>
+            <li>Copy vào đường dẫn /EFI/Clover/drivers64UEFI</li>
+            <li>Hãy nhớ <strong>HFSPlus.efi đặc biệt quan trọng, không được quên</strong></li>
+            </ul>
+
+            <figure>
+            <img src="https://images.viblo.asia/2d87f7a5-9f8d-473f-bcb5-7c8554907a7d.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <ol>
+            <li>Đối với USB theo kiểu Legacy, copy ApfsDriverLoader-64.efi từ thư mục drivers64UEFI vào thư mục drivers64</li>
+            </ol>
+
+            <figure>
+            <img src="https://images.viblo.asia/c4c9e7b1-fb59-46b9-8e26-d5ee8395f3f2.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <h2 id="bước4.copykexts">Bước 4. Copy kexts</h2>
+
+            <p>Kext được hiểu nôm na giống như driver trên windows vậy. Cần có kext để máy các bạn cài có thể nhận được các driver trên máy.</p>
+
+            <p><strong>- Vào thư mục EFI/CLOVER/kexts/, Xoá tất cả các thư mục chỉ để lại &#8220;Other&#8221;</strong></p>
+
+            <figure>
+            <img src="https://images.viblo.asia/3ceee31b-f953-49cc-9089-56db48c966ad.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <p>==&gt;</p>
+
+            <figure>
+            <img src="https://images.viblo.asia/0836e452-7e5f-449a-8648-f47da29b67df.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <p><strong>- Copy tất cả các kext dưới đây vào thư mục Other</strong></p>
+
+            <p>FakeSMC.kext: https://github.com/RehabMan/OS-X-FakeSMC-kozlek (Fake các phần cứng cơ bản của máy Apple)</p>
+
+            <p>VoodooPS2Controller.kext: https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller (Kext sử dụng màn phím và Touchpad)</p>
+
+            <p>USBInjectAll.kext: https://github.com/RehabMan/OS-X-USB-Inject-All</p>
+
+            <p><em>(Bộ đôi kext cho card đồ hoạ onboard)</em></p>
+
+            <p>Lilu.kext: https://github.com/acidanthera/Lilu
+            WhateverGreen.kext: https://github.com/acidanthera/WhateverGreen (replaces IntelGraphicsFixup.kext)</p>
+
+            <p><em>(Bộ kext cho card mạng dây)</em></p>
+
+            <p>RealtekRTL8111.kext: https://github.com/RehabMan/OS-X-Realtek-Network</p>
+
+            <p>RealtekRTL8100.kext: http://www.insanelymac.com/forum/topic/296190-driver-for-realteks-rtl810x-fast-ethernet-series/</p>
+
+            <p>AppleIntelE1000e.kext: http://www.insanelymac.com/forum/topic/205771-appleintele1000ekext-for-108107106105/</p>
+
+            <p>IntelMausiEthernet.kext: https://github.com/RehabMan/OS-X-Intel-Network</p>
+
+            <p>AtherosE2200Ethernet.kext: https://github.com/Mieze/AtherosE2200Ethernet/releases</p>
+
+            <p><strong>Sau khi copy, thư mục Other trông sẽ như sau</strong></p>
+
+            <figure>
+            <img src="https://images.viblo.asia/8a2a0152-349e-4def-839f-f4f68d54965b.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <h2 id="bước5.chọnfileconfig.plistphùhợp">Bước 5. Chọn file config.plist phù hợp</h2>
+
+            <p>Truy cập đường dẫn sau: <a href="https://github.com/RehabMan/OS-X-Clover-Laptop-Config">https://github.com/RehabMan/OS-X-Clover-Laptop-Config</a>, chọn file config.plist phù hợp với cấu hình máy bạn. Chẳng hạn máy mình có cấu hình Intel HD Graphics 5500. Mình sẽ chọn file &#8220;config_HD5300_5500_6000.plist&#8221;</p>
+
+            <ul>
+            <li>Copy file đó vào thư mục EFI/CLOVER</li>
+            </ul>
+
+            <figure>
+            <img src="https://images.viblo.asia/5bbd3584-cc14-4513-803a-1a45d0971558.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <ul>
+            <li>Backup file &#8220;config.plist&#8221; cũ đi một chỗ khác. Sau đó đổi tên &#8220;config_HD5300_5500_6000.plist&#8221; thành &#8220;config.plist&#8221;</li>
+            </ul>
+
+            <figure>
+            <img src="https://images.viblo.asia/0c31d0ac-b9fc-4960-92f7-93ebdea2195e.png" alt="" class="img-fluid"/>
+            <figcaption></figcaption>
+            </figure>
+
+            <h2 id="bước6.bungfilecàiđặtmacos">Bước 6. Bung file cài đặt macOS</h2>
+
+            <p>Mở Terminal lên</p>
+
+            <p><strong>Đối với MacOS Mojave</strong></p>
+
+            <pre><code class="shell"># copy installer image
+            sudo &quot;/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmedia&quot; --volume  /Volumes/install_osx --nointeraction
+
+            # rename (Các lệnh rename này chỉ thực hiện sau khi đã bung file xong)
+            sudo diskutil rename &quot;Install macOS Mojave&quot; install_osx
+            </code></pre>
+
+            <p><strong>Đối với MacOS High Sierra</strong></p>
+
+            <pre><code class="shell"># copy installer image
+            sudo &quot;/Applications/Install macOS High Sierra.app/Contents/Resources/createinstallmedia&quot; --volume  /Volumes/install_osx --nointeraction
+
+            # rename
+            sudo diskutil rename &quot;Install macOS High Sierra&quot; install_osx
+            </code></pre>
+
+            <p><strong>Đối với MacOS Sierra</strong></p>
+
+            <pre><code class="shell"># copy installer image
+            sudo &quot;/Applications/Install macOS Sierra.app/Contents/Resources/createinstallmedia&quot; --volume  /Volumes/install_osx --applicationpath &quot;/Applications/Install macOS Sierra.app&quot; --nointeraction
+
+            # rename
+            sudo diskutil rename &quot;Install macOS Sierra&quot; install_osx
+            </code></pre>
+
+            <p><strong>Đối với MacOS El Capitan</strong></p>
+
+            <pre><code class="shell"># copy installer image
+            sudo &quot;/Applications/Install OS X El Capitan.app/Contents/Resources/createinstallmedia&quot; --volume  /Volumes/install_osx --applicationpath &quot;/Applications/Install OS X El Capitan.app&quot; --nointeraction
+
+            # rename
+            sudo diskutil rename &quot;Install OS X El Capitan&quot; install_osx
+            </code></pre>
+
+            <p><strong>Đối với MacOS Yosemite</strong></p>
+
+            <pre><code class="shell"># copy installer image
+            sudo &quot;/Applications/Install OS X Yosemite.app/Contents/Resources/createinstallmedia&quot; --volume  /Volumes/install_osx --applicationpath &quot;/Applications/Install OS X Yosemite.app&quot; --nointeraction
+
+            # rename
+            sudo diskutil rename &quot;Install OS X Yosemite&quot; install_osx
+            </code></pre>
+
+            <p><strong>Đối với MacOS Mavericks</strong></p>
+
+            <pre><code class="shell"># copy installer image
+            sudo &quot;/Applications/Install OS X Mavericks.app/Contents/Resources/createinstallmedia&quot; --volume  /Volumes/install_osx --applicationpath &quot;/Applications/Install OS X Mavericks.app&quot; --nointeraction
+
+            # rename
+            sudo diskutil rename &quot;Install OS X Mavericks&quot; install_osx
+            </code></pre>
+
+            <hr />
+
+            <p>Làm được đến đây là các bạn đã hoàn thành tạo 1 chiếc USB theo cách truyền thống nhất, một chiếc USB cài Hackintosh siêu sạch. Trong bài tiếp theo mình sẽ cài đặt MacOS từ chiếc USB này, các bạn nếu có quan tâm thì hãy theo dõi nhé 💪💪</p>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-left">
+					<p>Copyright © 2019 Minh Mon. Giữ bản quyền.</p>
+				</div>
+				<div class="col-6 text-right">
+					<div class="copyright">
+						<img src="../images/vietnam.jpg" alt="logo copyright" style="width: 30px;"> Việt Nam
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../js/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="../js/popper.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</body>
+</html>
